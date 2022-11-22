@@ -143,8 +143,8 @@
 	}
 
 	&__burger-btn-inner,
-	&__burger-btn-inner:after,
-	&__burger-btn-inner:before {
+	&__burger-btn-inner::after,
+	&__burger-btn-inner::before {
 		display: block;
 		position: absolute;
 		content: '';
@@ -160,13 +160,13 @@
 		transition: transform 0.13s linear;
 	}
 
-	&__burger-btn-inner:before {
+	&__burger-btn-inner::before {
 		top: -10px;
 		transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
 			transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	}
 
-	&__burger-btn-inner:after {
+	&__burger-btn-inner::after {
 		bottom: -10px;
 		transition: top 0.12s 0.2s, transform 0.13s;
 	}
@@ -176,14 +176,14 @@
 		transform: translate3d(0, -10px, 0) rotate(-45deg);
 		transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-		&:before {
+		&::before {
 			top: 0;
 			transform: rotate(-90deg);
 			transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
 				0.1s transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 		}
 
-		&:after {
+		&::after {
 			top: 0;
 			opacity: 0;
 			transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.1s, opacity 0.1s linear;

@@ -1,0 +1,16 @@
+@use '../abstract/' as a;
+
+.header {
+	position: relative;
+	margin-top: a.$menu-mini;
+	// height: 100%;
+	height: 60vh;
+	background-image: url('../img/header-small.jpg');
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+
+    &::before {
+        
+    }
+}
