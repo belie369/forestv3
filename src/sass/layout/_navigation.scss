@@ -14,6 +14,10 @@
 		justify-content: space-between;
 		align-items: center;
 		height: a.$menu-mini;
+
+		@include a.respond(large) {
+			height: a.$menu-maxi;
+		}
 	}
 
 	&__logo img {
@@ -23,6 +27,10 @@
 
 		@include a.respond(medium) {
 			width: 60%;
+		}
+
+		@include a.respond(large) {
+			width: 70%;
 		}
 	}
 
@@ -40,10 +48,21 @@
 		opacity: 0;
 		transform: translateX(100%);
 		transition: transform 0.3s, opacity 0.3s;
+
+		@include a.respond(large) {
+			flex-direction: row;
+			justify-content: flex-end;
+			position: static;
+			height: a.$menu-maxi;
+			transform: translateX(0);
+			opacity: 1;
+			width: auto;
+		}
 	}
 
 	&__item {
-		margin-bottom: 2em;
+		padding: 0.5rem 0;
+		// margin-bottom: 2em;
 		font-size: 2.4rem;
 		list-style: none;
 		text-transform: uppercase;
@@ -59,28 +78,25 @@
 			transition: background-color 0.3s;
 		}
 
+		&:hover {
+			@include a.respond(large) {
+				height: calc(a.$menu-maxi + 1px);
+				background-color: a.$color-black;
+
+				a {
+					color: a.$color-white;
+				}
+			}
+		}
+
 		a {
 			padding: 1em 1.5em;
 			font-weight: 700;
 			color: a.$color-black;
 
-			@include a.respond(medium) {
+			@include a.respond(large) {
 				font-weight: 500;
 				transition: color 0.3s;
-			}
-
-			&:hover {
-				//dodać jakiegoś hovera?
-
-				@include a.respond(medium) {
-					height: calc(a.$menu-maxi + 1px);
-					background-color: #000;
-					cursor: pointer;
-
-					a {
-						color: #fff;
-					}
-				}
 			}
 		}
 	}
@@ -109,6 +125,10 @@
 		text-transform: none;
 		overflow: visible;
 		transition: opacity 0.15s linear, filter 0.15s linear;
+
+		@include a.respond(large) {
+			display: none;
+		}
 	}
 
 	&__burger-btn-box {
