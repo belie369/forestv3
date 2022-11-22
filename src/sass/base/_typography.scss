@@ -1,4 +1,7 @@
+@use '../abstract/' as a;
+
 body {
 	font-family: 'Raleway', sans-serif;
-	font-size: 1.6rem;
+	font-size: a.$default-font-size;
+	color: a.$color-black;
 }
