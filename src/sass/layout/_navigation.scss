@@ -61,24 +61,28 @@
 	}
 
 	&__item {
-		padding: 0.5rem 0;
-		// margin-bottom: 2em;
+		padding: 0.5em 0;
+		margin-bottom: 1em;
 		font-size: 2.4rem;
 		list-style: none;
-		text-transform: uppercase;
+		transition: background-color 0.3s;
 
-		@include a.respond(medium) {
+		@include a.respond(large) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			margin-bottom: 0;
 			height: calc(a.$menu-maxi + 1px);
 			font-size: 1.8rem;
-			text-transform: none;
-			transition: background-color 0.3s;
 		}
 
 		&:hover {
+			background-color: a.$color-black;
+
+			a {
+				color: a.$color-white;
+			}
+
 			@include a.respond(large) {
 				height: calc(a.$menu-maxi + 1px);
 				background-color: a.$color-black;
@@ -91,7 +95,7 @@
 
 		a {
 			padding: 1em 1.5em;
-			font-weight: 700;
+			font-weight: 600;
 			color: a.$color-black;
 
 			@include a.respond(large) {
