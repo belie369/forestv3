@@ -3,14 +3,42 @@
 .header {
 	position: relative;
 	margin-top: a.$menu-mini;
-	// height: 100%;
-	height: 60vh;
+	height: 100%;
+	max-height: 600px;
 	background-image: url('../img/header-small.jpg');
 	background-position: center;
 	background-size: cover;
 	z-index: 0;
 
-    &::before {
-        
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: a.$hero-shadow;
+		z-index: -1;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 1.5em;
+		height: 60vh;
+		color: a.$color-white;
+		z-index: 10;
+	}
+
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 700;
+	}
+
+	p {
+		margin-bottom: 0.8em;
+		font-size: 2rem;
+	}
 }
