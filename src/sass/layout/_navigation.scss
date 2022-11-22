@@ -48,6 +48,17 @@
 		list-style: none;
 		text-transform: uppercase;
 
+		@include a.respond(medium) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0;
+			height: calc(a.$menu-maxi + 1px);
+			font-size: 1.8rem;
+			text-transform: none;
+			transition: background-color 0.3s;
+		}
+
 		a {
 			padding: 1em 1.5em;
 			font-weight: 700;
@@ -59,6 +70,8 @@
 			}
 
 			&:hover {
+				//dodać jakiegoś hovera?
+
 				@include a.respond(medium) {
 					height: calc(a.$menu-maxi + 1px);
 					background-color: #000;
@@ -69,24 +82,23 @@
 					}
 				}
 			}
-			//dodać jakiegoś hovera
-		}
-
-		@include a.respond(medium) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: 0;
-			height: calc(a.$menu-maxi + 1px);
-			font-size: 1.8rem;
-			text-transform: none;
-			transition: background-color 0.3s;
 		}
 	}
 
 	.show-menu {
 		transform: translateX(0);
 		opacity: 1;
+	}
+
+	.active {
+		@include a.respond(medium) {
+			height: calc(a.$menu-maxi + 1px);
+			background-color: #000;
+
+			a {
+				color: #fff;
+			}
+		}
 	}
 
 	// HAMBURGER

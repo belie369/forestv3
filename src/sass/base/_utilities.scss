@@ -1,6 +1,15 @@
+@use '../abstract/' as a;
+
 .container {
 	margin: 0 auto;
 	padding: 0 1.5em;
 	width: 100%;
 	max-width: 1200px;
+
+	@include a.respond(medium) {
+		margin: 0 auto;
+		padding: 0 2em;
+		width: 100%;
+		max-width: 1200px;
+	}
 }
