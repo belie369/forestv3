@@ -36,15 +36,28 @@
 		height: 60vh;
 		color: a.$color-white;
 		z-index: 10;
-	}
 
-	h1 {
-		font-size: 3.2rem;
-		font-weight: 700;
-	}
+		@include a.respond(large) {
+			height: 37vh;
+		}
 
-	p {
-		margin-bottom: 0.8em;
-		font-size: 2rem;
+		h1 {
+			font-size: 3.2rem;
+			font-weight: 700;
+
+			@include a.respond(large) {
+				font-size: 3.6rem;
+			}
+		}
+
+		p {
+			margin-bottom: 0.8em;
+			font-size: 2rem;
+
+			@include a.respond(large) {
+				margin-bottom: 0.2em;
+				font-size: 2.6rem;
+			}
+		}
 	}
 }
