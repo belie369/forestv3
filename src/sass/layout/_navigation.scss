@@ -128,7 +128,7 @@
 		border: 0;
 		text-transform: none;
 		overflow: visible;
-		transition: opacity 0.15s linear, filter 0.15s linear;
+		transition: opacity 0.15s linear;
 
 		@include a.respond(large) {
 			display: none;
@@ -150,14 +150,14 @@
 		content: '';
 		width: 35px;
 		height: 3px;
-		background-color: #000;
+		background-color: a.$color-black;
 		border-radius: 6px;
 		transition: transform 0.15s ease;
 	}
 
 	&__burger-btn-inner {
 		bottom: 10px;
-		transition: transform 0.13s linear;
+		transition: transform 0.13s linear, background-color 0.2s;
 	}
 
 	&__burger-btn-inner::before {
@@ -188,5 +188,12 @@
 			opacity: 0;
 			transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.1s, opacity 0.1s linear;
 		}
+	}
+
+	// Hover action
+	&__burger-btn:hover &__burger-btn-inner,
+	&__burger-btn:hover &__burger-btn-inner::after,
+	&__burger-btn:hover &__burger-btn-inner::before {
+		background-color: #787878;
 	}
 }
