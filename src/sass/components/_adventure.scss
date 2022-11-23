@@ -1,0 +1,54 @@
+@use '../abstract/' as a;
+
+.adventure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 3.2em;
+
+	&__img {
+		position: relative;
+		height: 20vh;
+		width: 100%;
+		background-image: url('../img/girl-small.jpg');
+		background-position: 50% 50%;
+		background-size: cover;
+
+		@include a.respond(large) {
+			height: 25vh;
+			background-image: url('../img/girl-big.jpg');
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: a.$hero-shadow;
+		}
+	}
+
+	&__text {
+		color: a.$color-white;
+		padding: 1em 10%;
+		margin: 1em;
+		font-size: 2.2rem;
+		font-weight: 500;
+		text-align: center;
+		border: 1px solid #fff;
+		z-index: 9;
+
+		@include a.respond(medium) {
+			padding: 1em 20%;
+			font-size: 2.8rem;
+		}
+
+		@include a.respond(large) {
+			padding: 0.8em 7.5em;
+			font-size: 3.5rem;
+		}
+	}
+}
