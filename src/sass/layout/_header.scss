@@ -10,6 +10,12 @@
 	background-size: cover;
 	z-index: 0;
 
+	@include a.respond(large) {
+		background-image: url('../img/header-big.jpg');
+		background-position: 100% 50%;
+		margin-top: a.$menu-maxi;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
