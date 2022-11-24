@@ -74,6 +74,16 @@
 			.nok {
 				color: a.$color-grey-1;
 			}
+
+			.check,
+			.negative {
+				margin-right: 0.4em;
+				font-weight: 600;
+			}
+
+			.check {
+				color: a.$color-green-1;
+			}
 		}
 
 		&-btn {
@@ -104,8 +114,44 @@
 				z-index: -1;
 			}
 
+			&:hover {
+				font-weight: 500;
+			}
+
 			&:hover::before {
 				opacity: 1;
+			}
+		}
+	}
+
+	&__additional-info {
+		margin: 3.2em 0;
+		text-align: center;
+
+		a {
+			position: relative;
+			padding: 0.1em 0.2em;
+			border-bottom: 0.2em solid a.$color-green-1;
+			color: a.$color-black;
+			font-weight: 700;
+			transition: background-color 0.3s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 100%;
+				width: 101%;
+				background-color: a.$color-green-1;
+				transform: scaleY(0);
+				transform-origin: bottom;
+				transition: transform 0.3s;
+				z-index: -1;
+			}
+
+			&:hover::before {
+				transform: scaleY(1);
 			}
 		}
 	}
