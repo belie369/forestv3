@@ -63,26 +63,28 @@
 		&-list {
 			list-style: none;
 
-			li {
+			.ok,
+			.nok {
 				margin: 0.5em 0;
 			}
 
 			.ok {
 				color: a.$color-black;
+
+				&::before {
+					content: '✓';
+					margin-right: 0.4em;
+					color: a.$color-green-1;
+				}
 			}
 
 			.nok {
 				color: a.$color-grey-1;
-			}
 
-			.check,
-			.negative {
-				margin-right: 0.4em;
-				font-weight: 600;
-			}
-
-			.check {
-				color: a.$color-green-1;
+				&::before {
+					content: '－';
+					margin-right: 0.3em;
+				}
 			}
 		}
 
@@ -131,7 +133,7 @@
 		a {
 			position: relative;
 			padding: 0.1em 0.2em;
-			border-bottom: 0.2em solid a.$color-green-1;
+			border-bottom: 2px solid a.$color-green-1;
 			color: a.$color-black;
 			font-weight: 700;
 			transition: background-color 0.3s;
@@ -139,7 +141,7 @@
 			&::before {
 				content: '';
 				position: absolute;
-				bottom: 0;
+				bottom: -2px;
 				left: 0;
 				height: 100%;
 				width: 101%;
