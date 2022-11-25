@@ -1,7 +1,7 @@
 @use '../abstract/' as a;
 
 .footer {
-	padding: 3.5em 0 4em;
+	padding: 3.5em 0 0;
 	background-color: a.$color-grey-5;
 
 	&__box {
@@ -33,7 +33,7 @@
 		}
 
 		@include a.respond(large) {
-			gap: 3em;
+			gap: 3.5em;
 			margin-right: 5em;
 		}
 
@@ -55,5 +55,14 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	&__copyrights {
+		margin-top: 2em;
+		padding: 2em;
+		color: a.$color-grey-3;
+		font-size: 1.4rem;
+		text-align: center;
+		border-top: 1px solid a.$color-grey-2;
 	}
 }
