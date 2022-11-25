@@ -19,3 +19,17 @@ body {
 	font-size: 2.4rem;
 	font-weight: 700;
 }
+
+.heading-4 {
+	margin-bottom: 0.8em;
+	font-size: 1.6rem;
+	font-weight: 700;
+
+	@include a.respond(medium) {
+		font-size: 2rem;
+	}
+
+	@include a.respond(large) {
+		font-size: 2.2rem;
+	}
+}
