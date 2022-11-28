@@ -165,12 +165,12 @@
 	&__burger-btn-inner::before {
 		top: -10px;
 		transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
-			transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+			transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0.2s;
 	}
 
 	&__burger-btn-inner::after {
 		bottom: -10px;
-		transition: top 0.12s 0.2s, transform 0.13s;
+		transition: top 0.12s 0.2s, transform 0.13s, background-color 0.2s;
 	}
 
 	&__burger-btn.is-active &__burger-btn-inner {
