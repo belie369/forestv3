@@ -3,8 +3,8 @@
 .header {
 	position: relative;
 	margin-top: a.$menu-mini;
-	height: 100%;
-	max-height: 600px;
+	// height: 100%;
+	// max-height: 600px;
 	background-image: url('../img/header-small.jpg');
 	background-position: center;
 	background-size: cover;
@@ -33,21 +33,12 @@
 		align-items: flex-start;
 		flex-direction: column;
 		padding: 1.5em;
-		height: 60vh;
+		height: 50vh;
 		color: a.$color-white;
 		z-index: 10;
 
 		@include a.respond(large) {
 			height: 37vh;
-		}
-
-		h1 {
-			font-size: 3.2rem;
-			font-weight: 700;
-
-			@include a.respond(large) {
-				font-size: 3.6rem;
-			}
 		}
 
 		p {

@@ -6,6 +6,15 @@ body {
 	color: a.$color-black;
 }
 
+.heading-1 {
+	font-size: 3.2rem;
+	font-weight: 700;
+
+	@include a.respond(large) {
+		font-size: 3.6rem;
+	}
+}
+
 .heading-2 {
 	margin: 1.5em 0;
 	font-size: 3.2rem;
