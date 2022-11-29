@@ -1,0 +1,15 @@
+.about {
+	margin-bottom: 3.2em;
+
+	@include a.respond(large) {
+		margin-bottom: 4.6em;
+	}
+}
+
+.adventure {
+	margin-bottom: 3.2em;
+}
+
+.offer {
+	margin-bottom: 3.2em;
+}
