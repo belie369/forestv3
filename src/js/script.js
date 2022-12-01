@@ -5,6 +5,7 @@ let menu;
 let navbarItems;
 let navbarLinks;
 let sections;
+let getCurrentUrl;
 
 const prepareDOMElements = () => {
 	burgerBtn = document.querySelector('.navbar__burger-btn');
@@ -14,9 +15,11 @@ const prepareDOMElements = () => {
 	navbarItems = document.querySelectorAll('.navbar__item');
 	navbarLinks = document.querySelectorAll('.navbar__item a');
 	sections = document.querySelectorAll('.scrollspy');
+	getCurrentUrl = window.location.href;
 };
 
 const prepareDOMEvents = () => {
+	startHighlightNavFocus();
 	burgerBtn.addEventListener('click', showMenu);
 	logo.addEventListener('click', closeMenu);
 	navbarItems.forEach((item) => item.addEventListener('click', closeMenu));
@@ -48,14 +51,35 @@ const scrollSpy = () => {
 	});
 };
 
-const highlightNavbarItem = (id) => {
-	document.querySelector(`.navbar__item a[href*=${id}]`).parentElement.classList.add('active');
-};
-
 const removeHighlightNavbarItems = () => {
 	navbarItems.forEach((item) => {
 		item.classList.remove('active');
 	});
+};
+
+const highlightNavbarItem = (id) => {
+	document.querySelector(`.navbar__item a[href*=${id}]`).parentElement.classList.add('active');
+};
+
+const startHighlightNavFocus = () => {
+	const indexUrl = getCurrentUrl.lastIndexOf('/');
+	const url = getCurrentUrl.slice(0, indexUrl);
+
+	// removeHighlightNavbarItems();
+
+	switch (url) {
+		case `${url}`:
+		case `${url}/`:
+		case `${url}/index.html`:
+			highlightNavbarItem('home');
+			break;
+		case `${url}/contact.html`:
+			highlightNavbarItem('contact');
+			break;
+		case `${url}/offer.html`:
+			highlightNavbarItem('offer');
+			break;
+	}
 };
 
 prepareDOMElements();
