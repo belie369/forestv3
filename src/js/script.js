@@ -42,9 +42,7 @@ const scrollSpy = () => {
 		const sectionBottom = section.offsetTop + section.offsetHeight;
 
 		if (viewTop >= sectionTop && viewTop < sectionBottom) {
-			navbarItems.forEach((item) => {
-				item.classList.remove('active');
-			});
+			removeHighlightNavbarItems();
 			highlightNavbarItem(id);
 		}
 	});
@@ -52,6 +50,12 @@ const scrollSpy = () => {
 
 const highlightNavbarItem = (id) => {
 	document.querySelector(`.navbar__item a[href*=${id}]`).parentElement.classList.add('active');
+};
+
+const removeHighlightNavbarItems = () => {
+	navbarItems.forEach((item) => {
+		item.classList.remove('active');
+	});
 };
 
 prepareDOMElements();
