@@ -4,6 +4,7 @@ let navbar;
 let menu;
 let navbarItems;
 let navbarLinks;
+let sections;
 
 const prepareDOMElements = () => {
 	burgerBtn = document.querySelector('.navbar__burger-btn');
@@ -12,12 +13,14 @@ const prepareDOMElements = () => {
 	menu = document.querySelector('.navbar__list');
 	navbarItems = document.querySelectorAll('.navbar__item');
 	navbarLinks = document.querySelectorAll('.navbar__item a');
+	sections = document.querySelectorAll('.scrollspy');
 };
 
 const prepareDOMEvents = () => {
 	burgerBtn.addEventListener('click', showMenu);
 	logo.addEventListener('click', closeMenu);
 	navbarItems.forEach((item) => item.addEventListener('click', closeMenu));
+	window.addEventListener('scroll', scrollSpy);
 };
 
 const showMenu = () => {
@@ -28,6 +31,27 @@ const showMenu = () => {
 const closeMenu = () => {
 	burgerBtn.classList.remove('is-active');
 	menu.classList.remove('show-menu');
+};
+
+const scrollSpy = () => {
+	sections.forEach((section) => {
+		const id = section.getAttribute('id');
+
+		const viewTop = window.scrollY + 400;
+		const sectionTop = section.offsetTop;
+		const sectionBottom = section.offsetTop + section.offsetHeight;
+
+		if (viewTop >= sectionTop && viewTop < sectionBottom) {
+			navbarItems.forEach((item) => {
+				item.classList.remove('active');
+			});
+			highlightNavbarItem(id);
+		}
+	});
+};
+
+const highlightNavbarItem = (id) => {
+	document.querySelector(`.navbar__item a[href*=${id}]`).parentElement.classList.add('active');
 };
 
 prepareDOMElements();
