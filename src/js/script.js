@@ -6,6 +6,7 @@ let navbarItems;
 let navbarLinks;
 let sections;
 let getCurrentUrl;
+let yearFooter;
 
 const prepareDOMElements = () => {
 	burgerBtn = document.querySelector('.navbar__burger-btn');
@@ -16,10 +17,12 @@ const prepareDOMElements = () => {
 	navbarLinks = document.querySelectorAll('.navbar__item a');
 	sections = document.querySelectorAll('.scrollspy');
 	getCurrentUrl = window.location.href;
+	yearFooter = document.querySelector('.footer__year');
 };
 
 const prepareDOMEvents = () => {
 	startHighlightNavFocus();
+	letCurrentYear();
 	burgerBtn.addEventListener('click', showMenu);
 	logo.addEventListener('click', closeMenu);
 	navbarItems.forEach((item) => item.addEventListener('click', closeMenu));
@@ -80,6 +83,11 @@ const startHighlightNavFocus = () => {
 			highlightNavbarItem('offer');
 			break;
 	}
+};
+
+const letCurrentYear = () => {
+	const currentYear = new Date();
+	yearFooter.textContent = currentYear.getFullYear();
 };
 
 prepareDOMElements();
