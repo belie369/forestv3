@@ -14,7 +14,7 @@
 		background-size: cover;
 
 		@include a.respond(large) {
-			height: 25vh;
+			height: 30vh;
 			background-image: url('../img/girl-big.jpg');
 		}
 
@@ -45,8 +45,8 @@
 		}
 
 		@include a.respond(large) {
-			padding: 0.8em 7.5em;
-			font-size: 3.5rem;
+			padding: 0.8em 7.8em;
+			font-size: 3.8rem;
 		}
 	}
 }
