@@ -68,6 +68,9 @@ const startHighlightNavFocus = () => {
 	const hostNameLength = getCurrentUrl.lastIndexOf('/');
 	const hostName = getCurrentUrl.slice(0, hostNameLength);
 
+	console.log(hostName);
+	console.log(getCurrentUrl);
+
 	switch (getCurrentUrl) {
 		case `${hostName}`:
 		case `${hostName}/`:
