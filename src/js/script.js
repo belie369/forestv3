@@ -65,21 +65,19 @@ const highlightNavbarItem = (id) => {
 };
 
 const startHighlightNavFocus = () => {
-	const indexUrl = getCurrentUrl.lastIndexOf('/');
-	const url = getCurrentUrl.slice(0, indexUrl);
+	const hostNameLength = getCurrentUrl.lastIndexOf('/');
+	const hostName = getCurrentUrl.slice(0, hostNameLength);
 
-	// removeHighlightNavbarItems();
-
-	switch (url) {
-		case `${url}`:
-		case `${url}/`:
-		case `${url}/index.html`:
+	switch (getCurrentUrl) {
+		case `${hostName}`:
+		case `${hostName}/`:
+		case `${hostName}/index.html`:
 			highlightNavbarItem('home');
 			break;
-		case `${url}/contact.html`:
+		case `${hostName}/contact.html`:
 			highlightNavbarItem('contact');
 			break;
-		case `${url}/offer.html`:
+		case `${hostName}/offer.html`:
 			highlightNavbarItem('offer');
 			break;
 	}

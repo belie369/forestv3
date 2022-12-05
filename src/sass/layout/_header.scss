@@ -22,6 +22,14 @@
 		}
 	}
 
+	&__offer {
+		background-image: url('../img/offer-small.jpg');
+
+		@include a.respond(large) {
+			background-image: url('../img/offer-big.jpg');
+		}
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
