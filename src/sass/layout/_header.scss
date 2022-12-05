@@ -5,15 +5,21 @@
 	margin-top: a.$menu-mini;
 	// height: 100%;
 	// max-height: 600px;
-	background-image: url('../img/header-small.jpg');
 	background-position: center;
 	background-size: cover;
 	z-index: 0;
 
 	@include a.respond(large) {
-		background-image: url('../img/header-big.jpg');
 		background-position: 100% 50%;
 		margin-top: a.$menu-maxi;
+	}
+
+	&__home {
+		background-image: url('../img/header-small.jpg');
+
+		@include a.respond(large) {
+			background-image: url('../img/header-big.jpg');
+		}
 	}
 
 	&::before {
