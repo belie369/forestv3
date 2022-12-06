@@ -77,7 +77,7 @@ const startHighlightNavFocus = () => {
 		case `${hostName}/contact.html`:
 			highlightNavbarItem('contact');
 			break;
-		case `${hostName}/offer.html`:
+		case `${hostName}/offer-ext.html`:
 			highlightNavbarItem('offer');
 			break;
 	}
