@@ -34,6 +34,10 @@ body {
 	font-size: 1.6rem;
 	font-weight: 700;
 
+	&--offer {
+		margin-bottom: 0;
+	}
+
 	@include a.respond(medium) {
 		font-size: 2rem;
 	}
