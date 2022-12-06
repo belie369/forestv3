@@ -125,10 +125,6 @@
 				z-index: -1;
 			}
 
-			&:hover {
-				font-weight: 500;
-			}
-
 			&:hover::before {
 				opacity: 1;
 			}
