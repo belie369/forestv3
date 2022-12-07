@@ -1,24 +1,29 @@
 @use '../abstract/' as a;
 
 .offer-ext {
+	padding: 3.5em 2.8em;
+
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	gap: 3rem;
 
-	padding: 3.5em 2.8em;
+	@include a.respond(medium) {
+		grid-template-columns: repeat(2, minmax(25rem, 1fr));
+		gap: 3rem;
+	}
 
 	&__offer {
 		display: grid;
 		grid-template-columns: min-content 1fr;
 		row-gap: 1rem;
-		column-gap: 1.5rem;
+		column-gap: 2.3rem;
 	}
 
 	&__icon {
 		grid-row: 1 / span 2;
 		color: rgba(a.$color-grey-4, 0.6);
 		font-size: 3.5rem;
-		transform: translateY(0.2em);
+		transform: translateY(0.1em);
 		line-height: 0;
 	}
 
