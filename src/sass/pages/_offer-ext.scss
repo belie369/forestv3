@@ -1,7 +1,7 @@
 @use '../abstract/' as a;
 
 .offer-ext {
-	padding: 3.5em 2.8em;
+	padding: 0 2.8em 3.5em;
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -35,5 +35,20 @@
 	&__plus {
 		color: a.$color-grey-3;
 		transform: translateX(30%);
+	}
+}
+
+.offer-cta {
+	margin: 1.5em 0 3.5em;
+	text-align: center;
+
+	&__txt {
+		margin-bottom: 2.5rem;
+		font-size: 2.4rem;
+	}
+
+	&__cta-txt {
+		font-size: 3.2rem;
+		text-transform: uppercase;
 	}
 }
