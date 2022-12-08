@@ -1,15 +1,17 @@
 @use '../abstract/' as a;
 
 .offer-ext {
-	padding: 2.5em 2.8em 3.6em;
+	&__wrapper {
+		padding: 2.5em 2.8em 3.6em;
 
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-	gap: 3rem;
-
-	@include a.respond(medium) {
-		grid-template-columns: repeat(2, minmax(25rem, 1fr));
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 		gap: 3rem;
+
+		@include a.respond(medium) {
+			grid-template-columns: repeat(2, minmax(25rem, 1fr));
+			gap: 3rem;
+		}
 	}
 
 	&__offer {
