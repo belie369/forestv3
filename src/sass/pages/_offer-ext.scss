@@ -1,7 +1,7 @@
 @use '../abstract/' as a;
 
 .offer-ext {
-	padding: 0 2.8em 3.6em;
+	padding: 2.5em 2.8em 3.6em;
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -36,6 +36,10 @@
 		color: a.$color-grey-3;
 		transform: translateX(30%);
 	}
+
+	&__details {
+		line-height: 2;
+	}
 }
 
 .offer-cta {
@@ -61,7 +65,7 @@
 			position: absolute;
 			bottom: -2px;
 			left: 0;
-			height: 103%;
+			height: 102%;
 			width: 100%;
 			background-color: a.$color-green-1;
 			transform: scaleY(0);
