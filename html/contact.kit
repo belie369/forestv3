@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona najpiękniejszego parku w okolicy">
+    <meta name="keywords" content="park, forest, las">
+    <meta property="og:title" content="Forest Group - Najpiękniejszy park">
+    <meta property="og:description" content="Strona najpiękniejszego parku w okolicy - Forest Group">
+    <meta property="og:url" content="https://forest.pl">
+    <meta property=”og:type” content="website">
+    <!-- <meta property="og:image" content="uzupełnić"> -->
+    <meta property="og:locale" content="pl_PL">
+    <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/img/fav/favicon-16x16.png">
+    <link rel="manifest" href="./dist/img/fav/site.webmanifest">
+    <link rel="mask-icon" href="./dist/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer="" src="./dist/js/script.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <title>Kontakt | Forest Group - Najpiękniejszy park</title>
+</head>
+
+<body>
+    <!-- @include 'nav.kit'-->
+    <header class="header header__contact" id="header-contact">
+        <div class="header__text container">
+            <p>Forest Group</p>
+            <h1 class="heading-1">Skontaktuj się z nami</h1>
+        </div>
+    </header>
+    <main>
+        <section class="contact container scrollspy" id="contact">
+            <h2 class="heading-2">Kontakt</h2>
+            <div class="contact__box">
+                <div class="contact__informations">
+                    <h4 class="heading-4 contact__informations-heading">Informacje kontaktowe</h4>
+                    <div class="contact__informations-details">
+                        <div class="contact__informations-text">Masz więcej pytań? Skontaktuj się z nami za pomocą
+                            dostępnych opcji lub poprzez formularz kontaktowy.</div>
+                        <p>
+                            <ion-icon name="call-outline" class=""></ion-icon> +12 123 456 789
+                        </p>
+                        <p>
+                            <ion-icon name="mail-open-outline"></ion-icon> forest@forest.pl
+                        </p>
+                        <p>
+                            <ion-icon name="navigate-circle-outline"></ion-icon> ul. Jasnogórska 2, 31-358 Kraków
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__form">
+                    <form action="#" class="form">
+                        <div class="form__group">
+                            <label for="first-name" class="form__label">Imię</label>
+                            <input id="first-name" type="text" class="form__input" placeholder="Adam">
+                        </div>
+                        <div class="form__group">
+                            <label for="last-name" class="form__label">Nazwisko</label>
+                            <input id="last-name" type="text" class="form__input" placeholder="Nowak">
+                        </div>
+                        <div class="form__group">
+                            <label for="mail" class="form__label">E-Mail</label>
+                            <input id="mail" type="email" class="form__input" placeholder="adam@mail.pl">
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Zostaw swoją wiadomość</label>
+                            <textarea name="message" id="message" class="form__message">Treść wiadomości</textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2 class="heading-2">Nasza lokalizacja</h2>
+        </section>
+    </main>
+    <!-- @include 'footer.kit'-->
+</body>
+
+</html>

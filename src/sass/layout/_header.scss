@@ -30,6 +30,14 @@
 		}
 	}
 
+	&__contact {
+		background-image: url('../img/contact-small.jpg');
+
+		@include a.respond(large) {
+			background-image: url('../img/contact-big.jpg');
+		}
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
