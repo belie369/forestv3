@@ -6,11 +6,11 @@
 
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-		gap: 3rem;
+		gap: 3.2rem;
 
 		@include a.respond(medium) {
 			grid-template-columns: repeat(2, minmax(25rem, 1fr));
-			gap: 3rem;
+			gap: 3.5rem;
 		}
 	}
 
