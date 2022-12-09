@@ -40,6 +40,9 @@
         </div>
     </header>
     <main>
+        <section class="contant-location" id="contact-location">
+            <h2 class="heading-2">Nasza lokalizacja</h2>
+        </section>
         <section class="contact container scrollspy" id="contact">
             <h2 class="heading-2">Kontakt</h2>
             <div class="contact__box">
@@ -49,13 +52,14 @@
                         <div class="contact__informations-text">Masz więcej pytań? Skontaktuj się z nami za pomocą
                             dostępnych opcji lub poprzez formularz kontaktowy.</div>
                         <p>
-                            <ion-icon name="call-outline" class=""></ion-icon> +12 123 456 789
+                            <ion-icon name="call-outline" class="contact__icon"></ion-icon> +12 123 456 789
                         </p>
                         <p>
-                            <ion-icon name="mail-open-outline"></ion-icon> forest@forest.pl
+                            <ion-icon name="mail-open-outline" class="contact__icon"></ion-icon> forest@forest.pl
                         </p>
                         <p>
-                            <ion-icon name="navigate-circle-outline"></ion-icon> ul. Jasnogórska 2, 31-358 Kraków
+                            <ion-icon name="navigate-circle-outline" class="contact__icon"></ion-icon> ul. Jasnogórska
+                            2, 31-358 Kraków
                         </p>
                     </div>
                 </div>
@@ -70,19 +74,23 @@
                             <input id="last-name" type="text" class="form__input" placeholder="Nowak">
                         </div>
                         <div class="form__group">
-                            <label for="mail" class="form__label">E-Mail</label>
+                            <label for="mail" class="form__label">E-mail</label>
                             <input id="mail" type="email" class="form__input" placeholder="adam@mail.pl">
                         </div>
                         <div class="form__group">
+                            <label for="phone" class="form__label">Telefon</label>
+                            <input id="phone" type="tel" required class="form__input" placeholder="adam@mail.pl">
+                        </div>
+                        <div class="form__group form__group--message">
                             <label for="message" class="form__label">Zostaw swoją wiadomość</label>
                             <textarea name="message" id="message" class="form__message">Treść wiadomości</textarea>
+                        </div>
+                        <div class="form__group form__group--btn">
+                            <button class="form__btn" type="submit" name="form-submit">Wyślij</button>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>
-        <section class="contant-location" id="contact-location">
-            <h2 class="heading-2">Nasza lokalizacja</h2>
         </section>
     </main>
     <!-- @include 'footer.kit'-->

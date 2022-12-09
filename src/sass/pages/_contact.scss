@@ -1,0 +1,121 @@
+@use '../abstract/' as a;
+
+.contact {
+	margin-bottom: 3.5em;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5em;
+
+		// border-radius: 7px;
+		// box-shadow: 0 1px 6px a.$color-grey-1;
+
+		@include a.respond(large) {
+			flex-direction: row;
+		}
+	}
+
+	&__informations {
+		position: relative;
+		padding: 2.5em;
+		color: a.$color-white;
+		background-image: url('../img/contact-form-small.jpg');
+		background-position: 100% 100%;
+		background-size: cover;
+		z-index: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: a.$hero-shadow;
+			z-index: -1;
+		}
+
+		@include a.respond(large) {
+			flex-basis: 40%;
+		}
+	}
+
+	&__informations-heading {
+		margin-bottom: 1.5em;
+		text-align: center;
+	}
+
+	&__informations-text {
+		margin-bottom: 2em;
+		width: 95%;
+		line-height: 2;
+	}
+
+	&__informations-details p:not(:last-child) {
+		margin-bottom: 1em;
+	}
+
+	&__icon {
+		margin-right: 0.5em;
+		color: rgba(a.$color-green-1, 1);
+		font-size: 2rem;
+	}
+
+	&__form {
+		@include a.respond(large) {
+			flex-basis: 60%;
+		}
+	}
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+
+	width: 100%;
+	height: 100%;
+
+	&__group {
+		flex: 1 1 60%;
+
+		@include a.respond(medium) {
+			flex: 1 1 35%;
+		}
+
+		@include a.respond(large) {
+			flex: 1 1 35%;
+		}
+
+		&--message {
+			flex-basis: 100%;
+		}
+
+		&--btn {
+			align-self: flex-end;
+			// justify-self: flex-end;
+		}
+	}
+
+	&__label {
+		margin-bottom: 0.5em;
+		display: block;
+		font-weight: 600;
+	}
+
+	&__input,
+	&__message {
+		padding: 1em;
+	}
+
+	&__input {
+		width: 100%;
+	}
+
+	&__message {
+		width: 100%;
+	}
+}

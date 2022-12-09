@@ -113,7 +113,7 @@
 	}
 
 	.active {
-		@include a.respond(medium) {
+		@include a.respond(large) {
 			height: calc(a.$menu-maxi + 1px);
 			background-color: #000;
 
