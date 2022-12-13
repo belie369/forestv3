@@ -83,7 +83,7 @@
                     <form action="#" class="form">
                         <div class="form__group">
                             <label for="first-name" class="form__label">Imię</label>
-                            <input id="first-name" type="text" class="form__input" placeholder="Adam">
+                            <input id="first-name" type="text" class="form__input" placeholder="Adam" required>
                         </div>
                         <div class="form__group">
                             <label for="last-name" class="form__label">Nazwisko</label>
@@ -91,15 +91,16 @@
                         </div>
                         <div class="form__group">
                             <label for="mail" class="form__label">E-mail</label>
-                            <input id="mail" type="email" class="form__input" placeholder="adam@mail.pl">
+                            <input id="mail" type="email" class="form__input" placeholder="adam@mail.pl" required>
                         </div>
                         <div class="form__group">
                             <label for="phone" class="form__label">Telefon</label>
-                            <input id="phone" type="tel" required class="form__input" placeholder="123-456-789">
+                            <input id="phone" type="tel" class="form__input" placeholder="123-456-789">
                         </div>
                         <div class="form__group form__group--message">
                             <label for="message" class="form__label">Zostaw swoją wiadomość</label>
-                            <textarea name="message" id="message" class="form__message">Treść wiadomości</textarea>
+                            <textarea name="message" id="message" class="form__message"
+                                placeholder="Wpisz swoją wiadomość..."></textarea>
                         </div>
                         <div class="form__group form__group--btn">
                             <button class="form__btn" type="submit" name="form-submit">Wyślij</button>
