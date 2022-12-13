@@ -110,11 +110,16 @@
 		padding: 0.8em 0.3em;
 		width: 100%;
 		background-color: a.$color-white;
+		color: a.$color-black;
 		font-family: inherit;
 		font-size: 1.6rem;
 		border: none;
-		border-bottom: 2px solid rgba(a.$color-grey-4, 0.4);
+		border-bottom: 2px solid rgba(a.$color-grey-4, 0.6);
 		transition: border-bottom 0.2s;
+
+		&::placeholder {
+			color: a.$color-grey-2;
+		}
 
 		&:focus {
 			outline: none;
@@ -123,26 +128,9 @@
 		}
 	}
 
-	&__input {
-		color: a.$color-black;
-
-		&:focus {
-			color: a.$color-black;
-		}
-	}
-
 	&__message {
 		min-height: 120px;
-		color: a.$color-black;
 		resize: vertical;
-
-		&::placeholder {
-			color: a.$color-grey-3;
-		}
-
-		&:focus {
-			color: a.$color-black;
-		}
 	}
 
 	&__btn {
