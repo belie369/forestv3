@@ -1,30 +1,20 @@
-let firstName;
-let lastName;
-let mail;
-let phone;
-let message;
-let formBtn;
-let submitText;
+const firstName = document.querySelector('.form__input--first-name');
+const lastName = document.querySelector('.form__input--last-name');
+const mail = document.querySelector('.form__input--mail');
+const phone = document.querySelector('.form__input--phone');
+const message = document.querySelector('.form__message');
+const requiredValues = document.querySelectorAll('[required]');
 
-const prepareDOMElements = () => {
-	firstName = document.querySelector('.form__input--first-name');
-	lastName = document.querySelector('.form__input--last-name');
-	mail = document.querySelector('.form__input--mail');
-	phone = document.querySelector('.form__input--phone');
-	message = document.querySelector('.form__message');
-	phone = document.querySelector('.form__input--phone');
-	formBtn = document.querySelector('.form__btn');
-	submitText = document.querySelector('form__submit-text');
-};
+const formBtn = document.querySelector('.form__btn');
+const submitText = document.querySelector('.form__submit-text');
 
-const prepareDOMEvents = () => {
-	preventRefresh();
-};
-
-const preventRefresh = () =>
-	formBtn.addEventListener('click', (e) => {
+const checkForm = (input, e) => {
+	if (input.value !== '') {
 		e.preventDefault();
-	});
+		submitText.style.visibility = 'visible';
+	}
+};
 
-prepareDOMElements();
-prepareDOMEvents();
+formBtn.addEventListener('click', (e) => {
+	checkForm(firstName, e);
+});

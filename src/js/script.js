@@ -43,7 +43,7 @@ const scrollSpy = () => {
 	sections.forEach((section) => {
 		const id = section.getAttribute('id');
 
-		const viewTop = window.scrollY + 400;
+		const viewTop = window.scrollY + 200;
 		const sectionTop = section.offsetTop;
 		const sectionBottom = section.offsetTop + section.offsetHeight;
 
