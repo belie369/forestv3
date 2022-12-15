@@ -8,13 +8,17 @@ const requiredValues = document.querySelectorAll('[required]');
 const formBtn = document.querySelector('.form__btn');
 const submitText = document.querySelector('.form__submit-text');
 
-const checkForm = (input, e) => {
-	if (input.value !== '') {
+const checkForm = (elements, e) => {
+	const emptyElements = [...elements].filter((el) => el.value === '');
+
+	console.log(emptyElements);
+
+	if (emptyElements.length == 0) {
 		e.preventDefault();
 		submitText.style.visibility = 'visible';
 	}
 };
 
 formBtn.addEventListener('click', (e) => {
-	checkForm(firstName, e);
+	checkForm(requiredValues, e);
 });
