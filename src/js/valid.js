@@ -8,17 +8,18 @@ const requiredValues = document.querySelectorAll('[required]');
 const formBtn = document.querySelector('.form__btn');
 const submitText = document.querySelector('.form__submit-text');
 
-const checkForm = (elements, e) => {
+const requiredsFilled = (elements) => {
 	const emptyElements = [...elements].filter((el) => el.value === '');
 
-	console.log(emptyElements);
-
-	if (emptyElements.length == 0) {
-		e.preventDefault();
-		submitText.style.visibility = 'visible';
-	}
+	return emptyElements.length == 0;
 };
 
 formBtn.addEventListener('click', (e) => {
-	checkForm(requiredValues, e);
+	if (requiredsFilled(requiredValues)) {
+		submitText.style.visibility = 'visible';
+		e.preventDefault();
+		[firstName, lastName, mail, phone, message].forEach((el) => {
+			el.value = '';
+		});
+	}
 });
