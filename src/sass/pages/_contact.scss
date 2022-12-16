@@ -1,7 +1,11 @@
 @use '../abstract/' as a;
 
 .contact {
-	margin-bottom: 4em;
+	margin-bottom: 2.3em;
+
+	@include a.respond(large) {
+		margin-bottom: 4.5em;
+	}
 
 	&__box {
 		display: flex;
@@ -64,6 +68,20 @@
 			flex-basis: 60%;
 		}
 	}
+
+	&__submit-box {
+		margin-top: 1.5em;
+		line-height: 1;
+
+		@include a.respond(large) {
+			margin-bottom: 2em;
+		}
+	}
+
+	&__submit-box-text {
+		text-align: right;
+		visibility: hidden;
+	}
 }
 
 .form {
@@ -96,13 +114,6 @@
 			margin-right: 2%;
 			flex-basis: 100%;
 			text-align: right;
-
-			p {
-				position: absolute;
-				bottom: -1.8em;
-				right: 0;
-				visibility: hidden;
-			}
 		}
 	}
 
