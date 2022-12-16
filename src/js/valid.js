@@ -4,7 +4,6 @@ const mail = document.querySelector('.form__input--mail');
 const phone = document.querySelector('.form__input--phone');
 const message = document.querySelector('.form__message');
 const requiredValues = document.querySelectorAll('[required]');
-
 const formBtn = document.querySelector('.form__btn');
 const submitText = document.querySelector('.form__submit-text');
 
