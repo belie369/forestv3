@@ -1,5 +1,23 @@
 @use '../abstract/' as a;
 
+.contact-location {
+	margin-bottom: 4.5em;
+
+	&__map {
+		height: 70vw;
+		width: 100%;
+
+		@include a.respond(medium) {
+			height: 50vw;
+			max-height: 500px;
+		}
+		@include a.respond(large) {
+			height: 40vw;
+			max-height: 500px;
+		}
+	}
+}
+
 .contact {
 	margin-bottom: 2.3em;
 
