@@ -40,18 +40,20 @@ const closeMenu = () => {
 };
 
 const scrollSpy = () => {
-	sections.forEach((section) => {
-		const id = section.getAttribute('id');
+	if (window.innerWidth > 992) {
+		sections.forEach((section) => {
+			const id = section.getAttribute('id');
 
-		const viewTop = window.scrollY + 200;
-		const sectionTop = section.offsetTop;
-		const sectionBottom = section.offsetTop + section.offsetHeight;
+			const viewTop = window.scrollY + 200;
+			const sectionTop = section.offsetTop;
+			const sectionBottom = section.offsetTop + section.offsetHeight;
 
-		if (viewTop >= sectionTop && viewTop < sectionBottom) {
-			removeHighlightNavbarItems();
-			highlightNavbarItem(id);
-		}
-	});
+			if (viewTop >= sectionTop && viewTop < sectionBottom) {
+				removeHighlightNavbarItems();
+				highlightNavbarItem(id);
+			}
+		});
+	}
 };
 
 const removeHighlightNavbarItems = () => {
