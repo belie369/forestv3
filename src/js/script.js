@@ -32,6 +32,7 @@ const prepareDOMEvents = () => {
 const showMenu = () => {
 	menu.classList.toggle('show-menu');
 	burgerBtn.classList.toggle('is-active');
+	document.body.classList.toggle('fixed-body');
 };
 
 const closeMenu = () => {
