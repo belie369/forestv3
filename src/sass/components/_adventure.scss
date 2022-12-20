@@ -14,7 +14,7 @@
 		background-size: cover;
 
 		@include a.respond(large) {
-			height: 35vh;
+			height: 30vh;
 			background-image: url('../img/girl-big.jpg');
 		}
 
