@@ -9,6 +9,11 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 110px;
+
+	@include a.respond(medium) {
+		scroll-padding-top: 120px;
+	}
 }
 
 a {
