@@ -25,7 +25,7 @@ const prepareDOMEvents = () => {
 	letCurrentYear();
 	burgerBtn.addEventListener('click', showMenu);
 	logo.addEventListener('click', closeMenu);
-	navbarItems.forEach((item) => item.addEventListener('click', closeMenu));
+	navbarItems.forEach(item => item.addEventListener('click', closeMenu));
 	window.addEventListener('scroll', scrollSpy);
 };
 
@@ -42,10 +42,10 @@ const closeMenu = () => {
 
 const scrollSpy = () => {
 	if (window.innerWidth > 992) {
-		sections.forEach((section) => {
+		sections.forEach(section => {
 			const id = section.getAttribute('id');
 
-			const viewTop = window.scrollY + 200;
+			const viewTop = window.scrollY + 500;
 			const sectionTop = section.offsetTop;
 			const sectionBottom = section.offsetTop + section.offsetHeight;
 
@@ -58,12 +58,12 @@ const scrollSpy = () => {
 };
 
 const removeHighlightNavbarItems = () => {
-	navbarItems.forEach((item) => {
+	navbarItems.forEach(item => {
 		item.classList.remove('active');
 	});
 };
 
-const highlightNavbarItem = (id) => {
+const highlightNavbarItem = id => {
 	document.querySelector(`.navbar__item a[href*=${id}]`).parentElement.classList.add('active');
 };
 
